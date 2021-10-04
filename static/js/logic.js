@@ -38,10 +38,10 @@ function createMap(quakeMarks){
                 var div=L.DomUtil.create('div','legend');
                 var labels = ["<10","10-29","30-49","50-69","70-89","90+"];
                 grades = [0, 10, 30, 50, 70, 90],
-                div.innerHTML='<div><b>Legend</b></div';
+                div.innerHTML='<div style= background-color:#FFFFFF >&nbsp;&nbsp;<b>Legend</b>&nbsp;&nbsp;</div';
                 for(var i=0; i <grades.length; i++){
-                    div.innerHTML+='<i style="background:'+markerColor(grades[i])+' ">&nbsp;</i>&nbsp;&nbsp;'
-                    +labels[i]+'<br/>';
+                    div.innerHTML+='<div style= "background-color:#FFFFFF">&nbsp;&nbsp;<i style="background:'+markerColor(grades[i])+' ">&nbsp;</i>&nbsp;&nbsp;'
+                    +labels[i]+'&nbsp;&nbsp;<br/></div>';
                 }
                 return div;
             }
